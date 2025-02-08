@@ -172,11 +172,14 @@ window.onload = function () {
     const highlightButton = (selectedId) => {
         buttons.forEach(button => {
             if (parseInt(button.id) === selectedId) {
+                button.classList.add("selected");
                 button.style.backgroundColor = "rgba(14, 44, 83, 0.765)";
                 button.style.color = "#fff";
             } else {
                 button.style.backgroundColor = "";
                 button.style.color = "";
+                button.classList.remove("selected");
+                button.style.border = "dashed white";
             }
         });
     };

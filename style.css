@@ -90,11 +90,17 @@ body {
     border: dashed white;
     margin-bottom: 10px;
     margin-left: 10px;
+    transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
 #buttons > .button:hover {
     background-color: rgba(14, 44, 83, 0.765);
+    border: solid white !important;
     cursor: pointer;
+}
+
+.button.selected {
+    border: solid white !important;
 }
 
 #map {
@@ -153,6 +159,8 @@ body {
 
 /* Modal content */
 .modal-content {
+    font-family: "TimesNewRoman7";
+    font-weight: 200;
     background-color: #fff;
     margin: 15% auto;
     padding: 20px;
