@@ -1,0 +1,173 @@
+@font-face {
+    font-family: "TimesNewRoman7";
+    src: url(fonts/TimesNRSevenMTStdRegular.otf)
+  }
+
+body {
+    margin: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    background-image: url(https://jujutsukaisen.jp/images/bg_sub.jpg);
+    background-position-x: 50%;
+    background-position-y: 10%;
+    overflow: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    width: 20%;
+}
+
+#title {
+    font-family: "TimesNewRoman7";
+    font-weight: 300;
+    font-size: 40px;
+    text-shadow: rgba(0, 183, 255, 0.85) 1px 0 10px;
+    text-align: center;
+    display: table;
+    margin: 0px auto 80px;
+    padding: 0 66px;
+    position: relative;
+    color: #fff;
+}
+
+#title::before {
+    content: "";
+    background: url(https://jujutsukaisen.jp/images/deco01_l.png) no-repeat 0 0 / 100%;
+    width: 41px;
+    height: 81px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#title::after {
+    content: "";
+    background: url(https://jujutsukaisen.jp/images/deco01_r.png) no-repeat 0 0 / 100%;
+    width: 41px;
+    height: 81px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.text {
+    font-family: "TimesNewRoman7";
+    font-weight: 300;
+    font-size: 35px;
+    text-shadow: rgba(0, 183, 255, 0.85) 1px 0 10px;
+    text-align: center;
+    display: table;
+    margin: 0px auto 80px;
+    padding: 0 66px;
+    position: relative;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    width: 1000px;
+    justify-content: center;
+}
+
+#buttons > .button {
+    font-family: "TimesNewRoman7";
+    font-weight: 200;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.522);
+    color: white;
+    border: dashed white;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+#buttons > .button:hover {
+    background-color: rgba(14, 44, 83, 0.765);
+    cursor: pointer;
+}
+
+#map {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.pin-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pin {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    transform: translate(-50%, -50%);  /* Center the pin */
+    cursor: pointer;
+    animation: bobbing 2s infinite ease-in;  /* Apply bobbing animation */
+    transition: transform 0.3s ease;  /* Smooth transition for scaling */
+}
+
+@keyframes bobbing {
+    0% { transform: translate(-50%, -50%) translateY(0); }  /* Starting position */
+    50% { transform: translate(-50%, -50%) translateY(-5px); }  /* Move up */
+    100% { transform: translate(-50%, -50%) translateY(0); }  /* Move back to start */
+}
+
+.pin:hover {
+    animation: bobbing 2s infinite ease-in, hovering 0.2s forwards;
+}
+
+@keyframes hovering {
+    0% { transform: translate(-50%, -50%) scale(1) }
+    100% { transform: translate(-50%, -50%) scale(1.2)}
+}
+
+
+
+/* Modal Styles */
+.modal {
+    display: none;  /* Initially hidden */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);  /* Dark background */
+    opacity: 0; /* Start with invisible modal */
+    transition: opacity 0.3s ease; /* Add fade-in/fade-out transition */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
