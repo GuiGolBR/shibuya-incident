@@ -2,68 +2,313 @@ window.onload = function () {
     const map = document.getElementById('map');
     const buttons = document.querySelectorAll("#buttons .button");
 
-    // Define episodes with image URLs and pin locations
+    // Define episodes with image URLs and pin locations in percentages
     const episodes = {
         1: {
             title: "Episode 31 ~ 32",
             imgSrc: "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/map32.jpg",
             pins: [
-                { x: 1127, y: 380, label: "Hey Joe", description: "Fuck you" },
-                { x: 790, y: 680, label: "Hey Joe", description: "Fuck you" },
-                { x: 1270, y: 825, label: "Hey Joe", description: "Fuck you" },
-                { x: 1180, y: 590, label: "Hey Joe", description: "Fuck you" },
-                { x: 540, y: 495, label: "Hey Joe", description: "Fuck you" },
-                { x: 405, y: 550, label: "Hey Joe", description: "Fuck you" }
+                {
+                    x: 66, y: 13,
+                    texts: ["20:14 Shibuya Station, Exit 13 (outside the gates)"],
+                    descriptions: ["Nanami's team (Nanami, Ino, Fushiguro) and Ijichi are on standby."],
+                    images: ["https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/32-3.jpg"]
+                },
+                {
+                    x: 78, y: 75,
+                    texts: ["20:14 JL Shibuya Station New South Exit (outside the gates)"],
+                    descriptions: ["Kusakabe Team (Kusakabe, Panda) is on standby."],
+                    images: ["https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/32-4.jpg"]
+                },
+                {
+                    x: 70.8, y: 43,
+                    texts: ["20:31 Bunkamura Street Dogenzaka 2-chome East (inside the curtain)", "20:40 Shibuya Station B5F Shintoshin Line Platform"],
+                    descriptions: ["Gojo Satoru has arrived.", "Gojo begins fighting with Jogo, Hanami, and Choso."],
+                    images: ["https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/32-2-2.jpg", "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/32-2-1.jpg"]
+                },
+                {
+                    x: 39.5, y: 54,
+                    texts: ["20:14 Shibuya Mark City Restaurant Avenue entrance (outside the gates)"],
+                    descriptions: ["The Zenin team (Naobito, Maki, Nobara) and Nitta are on standby."],
+                    images: ["https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/32-1.jpg"]
+                },
+                {
+                    x: 19, y: 28,
+                    texts: ["20:39 Aoyama Cemetery", "20:51 Exit 2 of the downtown metro Meiji-Jingumae Station", "21:03 B2F, Meiji-Jingumae Station, downtown", "21:15 B4F , Meiji-Jingumae Station, downtown"],
+                    descriptions: ["The Mei Mei Squad (Mei Mei, Ui Ui, and Itadori) were on standby, and as a curtain similar to that in Shibuya had been lowered at Meiji-Jingumae Station, they began to move.", "The Mei Mei Team (Mei Mei, Ui Ui, Itadori) arrives at Meiji-Jingumae Station. They then split into Itadori, Mei Mei, and Ui Ui.", "Itadori encounters Ko Guy.", "After defeating Ko Guy, Itadori reunites with Mei Mei and Ui Ui."],
+                    images: ["https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/32-5-4.jpg", "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/32-5-3.jpg", "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/32-5-2.jpg", "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/32-5-1.jpg"]
+                },
+                {
+                    x: 8, y: 36,
+                    texts: ["21:14 Toshin Subway Meiji-Jingumae Station B5F Shintoshin Line Platform"],
+                    descriptions: ["Mahito starts moving from Meiji-Jingu-mae Station."],
+                    images: ["https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/32-6.jpg"]
+                }
             ]
         },
         2: {
             title: "Episode 33 ~ 34",
             imgSrc: "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/map34.jpg",
             pins: [
-                { x: 100, y: 150, label: "Underground Passage", description: "A dark and eerie passage." },
-                { x: 300, y: 350, label: "Battlefield Site", description: "A major fight happened here." }
+                {
+                    x: 10, y: 20,
+                    texts: ["20:14 Shibuya Station, Exit 13 (outside the gates)"],
+                    descriptions: ["Nanami's team (Nanami, Ino, Fushiguro) and Ijichi are waiting."],
+                    images: []
+                },
+                {
+                    x: 25, y: 40,
+                    texts: ["20:14 JL Shibuya Station New South Exit (outside the gates)"],
+                    descriptions: ["Kusakabe Team (Kusakabe, Panda) is on standby."],
+                    images: []
+                },
+                {
+                    x: 30, y: 60,
+                    texts: ["20:31 Bunkamura Street Dogenzaka 2-chome East (inside the curtain)"],
+                    descriptions: ["Gojo Satoru has arrived."],
+                    images: []
+                },
+                {
+                    x: 20, y: 50,
+                    texts: ["20:14 Shibuya Mark City Restaurant Avenue entrance (outside the gates)"],
+                    descriptions: ["The Zenin team (Naobito, Maki, Nobara) and Nitta are on standby."],
+                    images: []
+                },
+                {
+                    x: 50, y: 45,
+                    texts: ["20:39 Aoyama Cemetery"],
+                    descriptions: ["The Meimei Squad (Meimei, Ui Ui, and Itadori) were waiting, and as a curtain similar to that in Shibuya had been lowered at Meiji-Jingumae Station, they began to move."],
+                    images: []
+                },
+                {
+                    x: 35, y: 55,
+                    texts: ["21:14 Toshin Subway Meiji-Jingumae Station B5F Shintoshin Line Platform"],
+                    descriptions: ["Mahito starts moving from Meiji-Jingu-mae Station."],
+                    images: []
+                }
             ]
         },
         3: {
             title: "Episode 35 ~ 37",
             imgSrc: "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/map37.jpg",
             pins: [
-                { x: 100, y: 150, label: "Underground Passage", description: "A dark and eerie passage." },
-                { x: 300, y: 350, label: "Battlefield Site", description: "A major fight happened here." }
+                {
+                    x: 10, y: 20,
+                    texts: ["20:14 Shibuya Station, Exit 13 (outside the gates)"],
+                    descriptions: ["Nanami's team (Nanami, Ino, Fushiguro) and Ijichi are waiting."],
+                    images: []
+                },
+                {
+                    x: 25, y: 40,
+                    texts: ["20:14 JL Shibuya Station New South Exit (outside the gates)"],
+                    descriptions: ["Kusakabe Team (Kusakabe, Panda) is on standby."],
+                    images: []
+                },
+                {
+                    x: 30, y: 60,
+                    texts: ["20:31 Bunkamura Street Dogenzaka 2-chome East (inside the curtain)"],
+                    descriptions: ["Gojo Satoru has arrived."],
+                    images: []
+                },
+                {
+                    x: 20, y: 50,
+                    texts: ["20:14 Shibuya Mark City Restaurant Avenue entrance (outside the gates)"],
+                    descriptions: ["The Zenin team (Naobito, Maki, Nobara) and Nitta are on standby."],
+                    images: []
+                },
+                {
+                    x: 50, y: 45,
+                    texts: ["20:39 Aoyama Cemetery"],
+                    descriptions: ["The Meimei Squad (Meimei, Ui Ui, and Itadori) were waiting, and as a curtain similar to that in Shibuya had been lowered at Meiji-Jingumae Station, they began to move."],
+                    images: []
+                },
+                {
+                    x: 35, y: 55,
+                    texts: ["21:14 Toshin Subway Meiji-Jingumae Station B5F Shintoshin Line Platform"],
+                    descriptions: ["Mahito starts moving from Meiji-Jingu-mae Station."],
+                    images: []
+                }
             ]
         },
         4: {
             title: "Episode 38 ~ 39",
             imgSrc: "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/map39.jpg",
             pins: [
-                { x: 100, y: 150, label: "Underground Passage", description: "A dark and eerie passage." },
-                { x: 300, y: 350, label: "Battlefield Site", description: "A major fight happened here." }
+                {
+                    x: 10, y: 20,
+                    texts: ["20:14 Shibuya Station, Exit 13 (outside the gates)"],
+                    descriptions: ["Nanami's team (Nanami, Ino, Fushiguro) and Ijichi are waiting."],
+                    images: []
+                },
+                {
+                    x: 25, y: 40,
+                    texts: ["20:14 JL Shibuya Station New South Exit (outside the gates)"],
+                    descriptions: ["Kusakabe Team (Kusakabe, Panda) is on standby."],
+                    images: []
+                },
+                {
+                    x: 30, y: 60,
+                    texts: ["20:31 Bunkamura Street Dogenzaka 2-chome East (inside the curtain)"],
+                    descriptions: ["Gojo Satoru has arrived."],
+                    images: []
+                },
+                {
+                    x: 20, y: 50,
+                    texts: ["20:14 Shibuya Mark City Restaurant Avenue entrance (outside the gates)"],
+                    descriptions: ["The Zenin team (Naobito, Maki, Nobara) and Nitta are on standby."],
+                    images: []
+                },
+                {
+                    x: 50, y: 45,
+                    texts: ["20:39 Aoyama Cemetery"],
+                    descriptions: ["The Meimei Squad (Meimei, Ui Ui, and Itadori) were waiting, and as a curtain similar to that in Shibuya had been lowered at Meiji-Jingumae Station, they began to move."],
+                    images: []
+                },
+                {
+                    x: 35, y: 55,
+                    texts: ["21:14 Toshin Subway Meiji-Jingumae Station B5F Shintoshin Line Platform"],
+                    descriptions: ["Mahito starts moving from Meiji-Jingu-mae Station."],
+                    images: []
+                }
             ]
         },
         5: {
             title: "Episode 40 ~ 41",
             imgSrc: "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/map41.jpg",
             pins: [
-                { x: 100, y: 150, label: "Underground Passage", description: "A dark and eerie passage." },
-                { x: 300, y: 350, label: "Battlefield Site", description: "A major fight happened here." }
+                {
+                    x: 10, y: 20,
+                    texts: ["20:14 Shibuya Station, Exit 13 (outside the gates)"],
+                    descriptions: ["Nanami's team (Nanami, Ino, Fushiguro) and Ijichi are waiting."],
+                    images: []
+                },
+                {
+                    x: 25, y: 40,
+                    texts: ["20:14 JL Shibuya Station New South Exit (outside the gates)"],
+                    descriptions: ["Kusakabe Team (Kusakabe, Panda) is on standby."],
+                    images: []
+                },
+                {
+                    x: 30, y: 60,
+                    texts: ["20:31 Bunkamura Street Dogenzaka 2-chome East (inside the curtain)"],
+                    descriptions: ["Gojo Satoru has arrived."],
+                    images: []
+                },
+                {
+                    x: 20, y: 50,
+                    texts: ["20:14 Shibuya Mark City Restaurant Avenue entrance (outside the gates)"],
+                    descriptions: ["The Zenin team (Naobito, Maki, Nobara) and Nitta are on standby."],
+                    images: []
+                },
+                {
+                    x: 50, y: 45,
+                    texts: ["20:39 Aoyama Cemetery"],
+                    descriptions: ["The Meimei Squad (Meimei, Ui Ui, and Itadori) were waiting, and as a curtain similar to that in Shibuya had been lowered at Meiji-Jingumae Station, they began to move."],
+                    images: []
+                },
+                {
+                    x: 35, y: 55,
+                    texts: ["21:14 Toshin Subway Meiji-Jingumae Station B5F Shintoshin Line Platform"],
+                    descriptions: ["Mahito starts moving from Meiji-Jingu-mae Station."],
+                    images: []
+                }
             ]
         },
         6: {
             title: "Episode 42 ~ 45",
             imgSrc: "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/map45.jpg",
             pins: [
-                { x: 100, y: 150, label: "Underground Passage", description: "A dark and eerie passage." },
-                { x: 300, y: 350, label: "Battlefield Site", description: "A major fight happened here." }
+                {
+                    x: 10, y: 20,
+                    texts: ["20:14 Shibuya Station, Exit 13 (outside the gates)"],
+                    descriptions: ["Nanami's team (Nanami, Ino, Fushiguro) and Ijichi are waiting."],
+                    images: []
+                },
+                {
+                    x: 25, y: 40,
+                    texts: ["20:14 JL Shibuya Station New South Exit (outside the gates)"],
+                    descriptions: ["Kusakabe Team (Kusakabe, Panda) is on standby."],
+                    images: []
+                },
+                {
+                    x: 30, y: 60,
+                    texts: ["20:31 Bunkamura Street Dogenzaka 2-chome East (inside the curtain)"],
+                    descriptions: ["Gojo Satoru has arrived."],
+                    images: []
+                },
+                {
+                    x: 20, y: 50,
+                    texts: ["20:14 Shibuya Mark City Restaurant Avenue entrance (outside the gates)"],
+                    descriptions: ["The Zenin team (Naobito, Maki, Nobara) and Nitta are on standby."],
+                    images: []
+                },
+                {
+                    x: 50, y: 45,
+                    texts: ["20:39 Aoyama Cemetery"],
+                    descriptions: ["The Meimei Squad (Meimei, Ui Ui, and Itadori) were waiting, and as a curtain similar to that in Shibuya had been lowered at Meiji-Jingumae Station, they began to move."],
+                    images: []
+                },
+                {
+                    x: 35, y: 55,
+                    texts: ["21:14 Toshin Subway Meiji-Jingumae Station B5F Shintoshin Line Platform"],
+                    descriptions: ["Mahito starts moving from Meiji-Jingu-mae Station."],
+                    images: []
+                }
             ]
         },
         7: {
             title: "Episode 46 ~ 47",
             imgSrc: "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/map47.jpg",
             pins: [
-                { x: 100, y: 150, label: "Underground Passage", description: "A dark and eerie passage." },
-                { x: 300, y: 350, label: "Battlefield Site", description: "A major fight happened here." }
+                {
+                    x: 10, y: 20,
+                    texts: ["20:14 Shibuya Station, Exit 13 (outside the gates)"],
+                    descriptions: ["Nanami's team (Nanami, Ino, Fushiguro) and Ijichi are waiting."],
+                    images: []
+                },
+                {
+                    x: 25, y: 40,
+                    texts: ["20:14 JL Shibuya Station New South Exit (outside the gates)"],
+                    descriptions: ["Kusakabe Team (Kusakabe, Panda) is on standby."],
+                    images: []
+                },
+                {
+                    x: 30, y: 60,
+                    texts: ["20:31 Bunkamura Street Dogenzaka 2-chome East (inside the curtain)"],
+                    descriptions: ["Gojo Satoru has arrived."],
+                    images: []
+                },
+                {
+                    x: 20, y: 50,
+                    texts: ["20:14 Shibuya Mark City Restaurant Avenue entrance (outside the gates)"],
+                    descriptions: ["The Zenin team (Naobito, Maki, Nobara) and Nitta are on standby."],
+                    images: []
+                },
+                {
+                    x: 50, y: 45,
+                    texts: ["20:39 Aoyama Cemetery"],
+                    descriptions: ["The Meimei Squad (Meimei, Ui Ui, and Itadori) were waiting, and as a curtain similar to that in Shibuya had been lowered at Meiji-Jingumae Station, they began to move."],
+                    images: []
+                },
+                {
+                    x: 35, y: 55,
+                    texts: ["21:14 Toshin Subway Meiji-Jingumae Station B5F Shintoshin Line Platform"],
+                    descriptions: ["Mahito starts moving from Meiji-Jingu-mae Station."],
+                    images: []
+                }
             ]
-        }
+        },
+        // Other episodes remain unchanged
+    };
+
+    // Block page scroll when modal is displayed
+    const blockScroll = () => {
+        document.body.style.overflow = "hidden";
+    };
+
+    // Allow page scroll when modal is hidden
+    const allowScroll = () => {
+        document.body.style.overflow = "";
     };
 
     // Preload images for faster switching
@@ -89,23 +334,18 @@ window.onload = function () {
     modal.innerHTML = `
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2 id="modal-title"></h2>
-            <p id="modal-description"></p>
+            <div id="modal-content-container"></div>
         </div>
     `;
     document.body.appendChild(modal);
 
-    // Append elements to map container
-    map.appendChild(episodeText);
-    map.appendChild(image);
-    map.appendChild(pinContainer);
-
     // Modal event listener
     const closeModal = modal.querySelector(".close");
     closeModal.addEventListener("click", () => {
-        modal.style.opacity = "0";  // Fade out the modal
+        modal.style.opacity = "0";
         setTimeout(() => {
-            modal.style.display = "none";  // Hide the modal after fade-out
+            modal.style.display = "none";
+            allowScroll();  // Allow scroll after modal closes
         }, 300);
     });
 
@@ -114,6 +354,7 @@ window.onload = function () {
             modal.style.opacity = "0";  // Fade out the modal
             setTimeout(() => {
                 modal.style.display = "none";  // Hide the modal after fade-out
+                allowScroll();  // Allow scroll when modal is closed
             }, 300);
         }
     });
@@ -133,35 +374,86 @@ window.onload = function () {
             episodeText.innerHTML = episodes[episodeChoice].title;
             image.src = episodes[episodeChoice].imgSrc;
 
-            // Clear previous pins
-            pinContainer.innerHTML = "";
+            // Ensure the pin container is the same size and position as the image
+            image.onload = () => {
+                pinContainer.style.width = `${image.width}px`;
+                pinContainer.style.height = `${image.height}px`;
+                pinContainer.style.position = 'absolute';  // Align with the image
+                pinContainer.style.top = `${image.offsetTop}px`; // Align top with image
+                pinContainer.style.left = `${image.offsetLeft}px`; // Align left with image
 
-            // Add new pins
-            episodes[episodeChoice].pins.forEach(pin => {
-                const pinElement = document.createElement('img');
-                pinElement.src = "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/pin_circle.png";
-                pinElement.className = "pin";
-                pinElement.style.left = `${pin.x}px`;
-                pinElement.style.top = `${pin.y}px`;
-                pinElement.title = pin.label;
+                // Clear previous pins
+                pinContainer.innerHTML = "";
 
-                // Add click event to open modal
-                pinElement.addEventListener("click", () => {
-                    const modalTitle = document.getElementById("modal-title");
-                    const modalDescription = document.getElementById("modal-description");
+                // Add new pins
+                episodes[episodeChoice].pins.forEach(pin => {
+                    const pinElement = document.createElement('img');
+                    pinElement.src = "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/pin_circle.png";
+                    pinElement.className = "pin";
+                    pinElement.style.left = `${pin.x}%`;  // Use percentage-based positioning
+                    pinElement.style.top = `${pin.y}%`;   // Use percentage-based positioning
+                    pinElement.title = pin.texts[0]; // Show the first text in the tooltip
 
-                    if (modalTitle && modalDescription) {
-                        modalTitle.innerText = pin.label;
-                        modalDescription.innerText = pin.description;
+                    // Add click event to open modal
+                    pinElement.addEventListener("click", () => {
+                        const modalContentContainer = document.getElementById("modal-content-container");
+                        modalContentContainer.innerHTML = "";  // Clear the content first
+
+                        modal.style.display = "block";
+                        blockScroll();  // Block scroll when modal opens
+                        setTimeout(() => {
+                            modal.style.opacity = "1";
+                        }, 10);
+
+                        // Iterate through texts, images, and descriptions in the order: text, image, description
+                        for (let i = 0; i < Math.max(pin.texts.length, pin.images.length, pin.descriptions.length); i++) {
+                            // Add text if available
+                            if (i < pin.texts.length) {
+                                const textElement = document.createElement("p");
+                                textElement.innerText = pin.texts[i];
+                                textElement.className = "modal-title"
+                                modalContentContainer.appendChild(textElement);
+                            }
+
+                            // Add image if available
+                            if (i < pin.images.length) {
+                                const imageElement = document.createElement("img");
+                                imageElement.src = pin.images[i];
+                                imageElement.alt = "Image";
+                                modalContentContainer.appendChild(imageElement);
+                            }
+
+                            // Add description if available
+                            if (i < pin.descriptions.length) {
+                                const descriptionElement = document.createElement("p");
+                                descriptionElement.innerText = pin.descriptions[i];
+                                descriptionElement.className = "modal-description"
+                                modalContentContainer.appendChild(descriptionElement);
+
+                                // Add '▼' after the description except for the last one
+                                if (i < pin.descriptions.length - 1) {
+                                    const triangleElement = document.createElement("p");
+                                    triangleElement.innerText = "▼";
+                                    triangleElement.className = "modal-arrow"
+                                    modalContentContainer.appendChild(triangleElement);
+                                }
+                            }
+                        }
+
                         modal.style.display = "block";  // Show the modal
                         setTimeout(() => {
                             modal.style.opacity = "1";  // Fade in the modal
                         }, 10);  // Small delay for smooth transition
-                    }
-                });
+                    });
 
-                pinContainer.appendChild(pinElement);
-            });
+                    pinContainer.appendChild(pinElement);
+                });
+            };
+
+            // Add the image and pin container to the map once it's fully loaded
+            map.innerHTML = "";  // Clear previous content
+            map.appendChild(image);
+            map.appendChild(pinContainer);
 
             // Fade in
             map.style.opacity = "1";
