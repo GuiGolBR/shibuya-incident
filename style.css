@@ -108,6 +108,7 @@ body {
     opacity: 1;
     position: relative;
     display: inline-block;
+    margin-top: 40px;
 }
 
 .pin-container {
@@ -220,4 +221,31 @@ body {
     top: 10px;
     right: 15px;
     cursor: pointer;
+}
+
+#nav {
+    margin-top: -35px;
+}
+
+.button2 {
+    font-family: "TimesNewRoman7";
+    font-weight: 200;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.522);
+    color: white;
+    border: dashed white;
+    margin-left: 10px;
+    transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.button2:hover {
+    background-color: rgba(14, 44, 83, 0.765);
+    border: solid white !important;
+    cursor: pointer;
+}
+
+#selected {
+    border: solid white !important;
+    background-color: rgba(14, 44, 83, 0.765);
 }
