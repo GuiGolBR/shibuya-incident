@@ -249,3 +249,35 @@ body {
     border: solid white !important;
     background-color: rgba(14, 44, 83, 0.765);
 }
+
+#timeline {
+    margin-top: 40px;
+    width: 1250px;
+}
+
+.content {
+    font-family: "TimesNewRoman7";
+    font-weight: 200;
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.timeText {
+    margin-left: 30px;
+}
+
+.time {
+    font-size: 32px;
+    color: #d5d589;
+    font-weight: bold;
+}
+
+.timeTitle {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.timeDesc {
+    font-size: 20px;
+}

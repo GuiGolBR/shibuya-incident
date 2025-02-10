@@ -22,7 +22,7 @@ window.onload = function () {
                 },
                 {
                     x: 70.8, y: 43,
-                    texts: ["20:31 Bunkamura Street Dogenzaka 2-chome East (inside the curtain)", "20:40 Shibuya Station B5F Shintoshin Line Platform"],
+                    texts: ["20:31 Bunkamura Street Dogenzaka 2-chome East (inside the veil)", "20:40 Shibuya Station B5F Shintoshin Line Platform"],
                     descriptions: ["Gojo Satoru has arrived.", "Gojo begins fighting with Jogo, Hanami, and Choso."],
                     images: ["https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/32-2-2.jpg", "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/32-2-1.jpg"]
                 },
@@ -35,7 +35,7 @@ window.onload = function () {
                 {
                     x: 19, y: 28,
                     texts: ["20:39 Aoyama Cemetery", "20:51 Exit 2 of the downtown metro Meiji-Jingumae Station", "21:03 B2F, Meiji-Jingumae Station, downtown", "21:15 B4F , Meiji-Jingumae Station, downtown"],
-                    descriptions: ["The Mei Mei Squad (Mei Mei, Ui Ui, and Itadori) were on standby, and as a curtain similar to that in Shibuya had been lowered at Meiji-Jingumae Station, they began to move.", "The Mei Mei Team (Mei Mei, Ui Ui, Itadori) arrives at Meiji-Jingumae Station. They then split into Itadori, Mei Mei, and Ui Ui.", "Itadori encounters Ko Guy.", "After defeating Ko Guy, Itadori reunites with Mei Mei and Ui Ui."],
+                    descriptions: ["The Mei Mei Squad (Mei Mei, Ui Ui, and Itadori) were on standby, and as a veil similar to that in Shibuya had been lowered at Meiji-Jingumae Station, they began to move.", "The Mei Mei Team (Mei Mei, Ui Ui, Itadori) arrives at Meiji-Jingumae Station. They then split into Itadori, Mei Mei, and Ui Ui.", "Itadori encounters Ko Guy.", "After defeating Ko Guy, Itadori reunites with Mei Mei and Ui Ui."],
                     images: ["https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/32-5-4.jpg", "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/32-5-3.jpg", "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/32-5-2.jpg", "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/32-5-1.jpg"]
                 },
                 {
@@ -59,7 +59,7 @@ window.onload = function () {
                 {
                     x: 59.1, y: 18,
                     texts: ["21:22 Shibuya Station, Exit 13 (outside the gates)", "21:27 Meiji-Jingumae - Shibuya", "Shibuya, somewhere on the rooftop"],
-                    descriptions: ["Team Nanami (Nanami, Ino, and Fushiguro) charges in.", "Mini Mechamaru informs Itadori that Geto and the others are unable to move the Prison Realm.", `Itadori shouts loudly, transmitting the Gojo Seal to the sorcerers in Shibuya. Nanami's team, hearing Itadori's voice, soon joins up with Itadori.\nItadori, Fushiguro, and Ino leave it to Nanami to remove the "curtain that keeps sorcerers out", while Nanami heads to Ijichi for a "request that only first grade sorcerers can fulfill."`],
+                    descriptions: ["Team Nanami (Nanami, Ino, and Fushiguro) charges in.", "Mini Mechamaru informs Itadori that Geto and the others are unable to move the Prison Realm.", `Itadori shouts loudly, transmitting the Gojo Seal to the sorcerers in Shibuya. Nanami's team, hearing Itadori's voice, soon joins up with Itadori.\nItadori, Fushiguro, and Ino leave it to Nanami to remove the veil that keeps sorcerers out", while Nanami heads to Ijichi for a "request that only first grade sorcerers can fulfill."`],
                     images: ["https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/34-5-3.jpg", "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/34-5-2.jpg", "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/34-5-1.jpg"]
                 },
                 {
@@ -197,7 +197,7 @@ window.onload = function () {
                 {
                     x: 30.3, y: 27.5,
                     texts: ["23:14 Shoto Culture Village Street (outside the gates)"],
-                    descriptions: [`Kugisaki leaves Nitta Akari to be rescued and re-enters the "curtain."`],
+                    descriptions: [`Kugisaki leaves Nitta Akari to be rescued and re-enters the veil.`],
                     images: []
                 },
                 {
@@ -215,7 +215,7 @@ window.onload = function () {
                 {
                     x: 59, y: 44.9,
                     texts: ["23:09 Shibuya Station B5F Shintoshin Line Platform", "23:14 Shoto Culture Village Street (outside the gates)", "23:16 Dogenzaka Alley", "Dogenzaka Alley", "Inside Shibuya Station", "Inside Shibuya Station"],
-                    descriptions: ["Todo and Nitta Arata confirm that the Prison Realm has been taken away by Geto.", `Kugisaki leaves Nitta Akari to be rescued and re-enters the "curtain."`, "Kugisaki encounters Mahito's clone and begins fighting.", `Kugisaki uses "Resonance" to send damage from Mahito's clone to the main body as well.`, `Kugisaki chases after the fleeing Mahito clone, but is hit with the "Idle Transfiguration" effect from Mahito's clone and collapses in front of Itadori.`, "Todo rushes to Itadori's side when he finds himself in a difficult situation. Nitta Arata arrives at the same time and uses his own magic to attempt to treat Kugisaki and Itadori. Todo then encourages Itadori."],
+                    descriptions: ["Todo and Nitta Arata confirm that the Prison Realm has been taken away by Geto.", `Kugisaki leaves Nitta Akari to be rescued and re-enters the veil.`, "Kugisaki encounters Mahito's clone and begins fighting.", `Kugisaki uses "Resonance" to send damage from Mahito's clone to the main body as well.`, `Kugisaki chases after the fleeing Mahito clone, but is hit with the "Idle Transfiguration" effect from Mahito's clone and collapses in front of Itadori.`, "Todo rushes to Itadori's side when he finds himself in a difficult situation. Nitta Arata arrives at the same time and uses his own magic to attempt to treat Kugisaki and Itadori. Todo then encourages Itadori."],
                     images: ["https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/45-1-10.jpg", "", "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/45-2-4.jpg", "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/45-2-3.jpg", "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/45-2-2.jpg", "https://jujutsukaisen.jp/shibuyaincidentnow/assets/img/45-2-1.jpg"]
                 }
             ]
