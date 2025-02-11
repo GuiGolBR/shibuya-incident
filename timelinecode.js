@@ -9,8 +9,18 @@ window.onload = function () {
         },
         2: {
             time:"20:14",
-            title:["Shibuya Station, Central Tokyo Metro, Exit 13 (outside the gates)", "Shibuya Mark City Restaurant Avenue entrance (outside the gates)"],
-            description:["Nanami's team (Nanami, Ino, Fushiguro) and Ijichi are on standby.", "The Zenin team (Naobito, Maki, Kugisaki) and Nitta are on standby."]
+            title:["Shibuya Station, Central Tokyo Metro, Exit 13 (outside the gates)", "Shibuya Mark City Restaurant Avenue entrance (outside the gates)", "JL Shibuya Station New South Exit (outside the gates)", "Bunkamura Street, Dogenzaka 2-chome East (inside the veil)"],
+            description:["Nanami's team (Nanami, Ino, Fushiguro) and Ijichi are on standby.", "The Zenin team (Naobito, Maki, Kugisaki) and Nitta are on standby.", "Kusakabe Team (Kusakabe, Panda) is on standby.", 'There is mild confusion as ordinary citizens trapped inside the veil start to act violently, shouting "Bring me Gojo Satoru!"']
+        },
+        3: {
+            time: "20:31",
+            title: ["Bunkamura Street Dogenzaka 2-chome East (inside the veil)"],
+            description:["Gojo Satoru has arrived."]
+        },
+        4: {
+            time:"20:38",
+            title:["Shibuya Hikarie B3F"],
+            description:[`He witnesses the crowd being trapped behind the veil and understands the enemy's intentions.`]
         }
     }
 
@@ -33,9 +43,6 @@ window.onload = function () {
                 const title = document.createElement("p");
                 title.className = "timeTitle";
                 title.innerHTML = i.title[num];
-                
-                console.log(num)
-                console.log(i.title);
 
                 const description = document.createElement("p");
                 description.className = "timeDesc";
